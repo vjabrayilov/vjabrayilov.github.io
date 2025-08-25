@@ -6,12 +6,7 @@ tags: energy California grid electricity renewable-energy energy-storage energy-
 # categories: blog
 date: 2024-08-15
 featured: false
-
-authors:
-  - name: Mujgan Huseynli
-    url: "https://mujganhuseynli.github.io"
-    affiliations:
-      name: EE, George Washington University
+y
 toc:
   - name: Introduction
   - name: Current State of California Electric Grid and Energy Fuel Mix

@@ -27,7 +27,9 @@ I am a Ph.D. candidate in Computer Science at [Columbia University](https://colu
 My work spans _networking, operating systems, and machine learning runtimes_, with an emphasis on _CPU and GPU virtualization_. 
 I have built high-performance software such as [Machnet](https://github.com/microsoft/machnet), a kernel-bypass networking framework, and interned at [Microsoft Research](https://https://www.microsoft.com/en-us/research/about-microsoft-research/), where I worked on large-scale infrastructure for data and networking. 
 
-I bring expertise in _C/C++, Rust, CUDA, DPDK and Linux kernel programming_, and my interests lie at the intersection of high-frequency trading systems and large-scale AI platforms, where reliability and speed are critical.
+I have a expertise in _C/C++, Rust, CUDA, DPDK, eBPF and Linux kernel programming_, and my interests lie at high-frequency trading systems and large-scale AI platforms, where reliability and nano/microsecond-scale performance are critical.
+
+Before starting my Ph.D., I built [Replicant](https://github.com/psu-csl/replicated-store), a MultiPaxos-based key-value store for strongly consistent cloud replication during a research internship at [Penn State](https://psu.edu), and also gained experience at [EPFL](https://epfl.ch), where I worked on distributed systems reliability and failure analysis.
 
 <!-- ## Research Interests
 
