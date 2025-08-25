@@ -1,13 +1,4 @@
-<div
-  id="giscus_thread"
-  {% if page.layout == 'post' %}
-    style="max-width: {{ site.max_width }}; margin: 0 auto;"
-  {% endif %}
->
-  {% if page.layout == 'post' %}
-    <br>
-  {% endif %}
-
+<div id="giscus_thread" style="max-width: {{ site.max_width }}; margin: 0 auto;">
   {% if site.giscus.repo %}
     <script>
       let giscusTheme = determineComputedTheme();
