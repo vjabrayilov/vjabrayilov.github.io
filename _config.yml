@@ -20,7 +20,7 @@ github_url: "https://github.com/vjabrayilov"
 google_scholar: "https://scholar.google.com/citations?user=txBX3mIAAAAJ&hl=en"
 linkedin: "https://www.linkedin.com/in/vjabrayilov/"
 wechat: ""
-blog: "/blog"
+# blog: "/blog"
 profile_image: "/assets/images/profile.jpg"
 
 # Build settings

@@ -29,13 +29,13 @@
             {% if site.email %}
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:{{ site.email }}">Email: {{ site.email }}</a>
+                <a href="mailto:{{ site.email }}">{{ site.email }}</a>
               </div>
             {% endif %}
             {% if site.cv %}
               <div class="contact-item">
                 <i class="fas fa-file-pdf"></i>
-                <a href="{{ site.cv | relative_url }}">Curriculum Vitae</a>
+                <a href="{{ site.cv | relative_url }}">Resume</a>
               </div>
             {% endif %}
           </div>
