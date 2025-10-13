@@ -1,0 +1,87 @@
+{% for pub in site.data.publications %}
+<div class="publication">
+  <div class="publication-title">
+    {{ pub.title }}
+    <span class="artifact-icons">
+      {%- assign has_available = false -%}
+      {%- if pub.badges and pub.badges.available -%}{% assign has_available = true %}{%- endif -%}
+      {%- if pub.available -%}{% assign has_available = true %}{%- endif -%}
+      {%- assign available_src = '/assets/images/artifacts_available.jpg' -%}
+      {%- if pub.available and pub.available != true -%}{% assign available_src = pub.available %}{%- endif -%}
+      {%- if has_available -%}
+        <img class="artifact-icon-img" src="{{ available_src | relative_url }}" alt="Artifact Available" title="Artifact Available" />
+      {%- endif -%}
+
+      {%- assign has_functional = false -%}
+      {%- if pub.badges and pub.badges.functional -%}{% assign has_functional = true %}{%- endif -%}
+      {%- if pub.functional -%}{% assign has_functional = true %}{%- endif -%}
+      {%- assign functional_src = '/assets/images/artifacts_functional.jpg' -%}
+      {%- if pub.functional and pub.functional != true -%}{% assign functional_src = pub.functional %}{%- endif -%}
+      {%- if has_functional -%}
+        <img class="artifact-icon-img" src="{{ functional_src | relative_url }}" alt="Artifact Functional" title="Artifact Functional" />
+      {%- endif -%}
+
+      {%- assign has_repro = false -%}
+      {%- if pub.badges and pub.badges.reproducible -%}{% assign has_repro = true %}{%- endif -%}
+      {%- if pub.reproducible -%}{% assign has_repro = true %}{%- endif -%}
+      {%- assign reproducible_src = '/assets/images/artifacts_reproducible.jpg' -%}
+      {%- if pub.reproducible and pub.reproducible != true -%}{% assign reproducible_src = pub.reproducible %}{%- endif -%}
+      {%- if has_repro -%}
+        <img class="artifact-icon-img" src="{{ reproducible_src | relative_url }}" alt="Results Reproduced" title="Results Reproduced" />
+      {%- endif -%}
+    </span>
+  </div>
+  <div class="publication-authors">
+    {% for author in pub.authors %}
+      {% if author == site.name or author == "Yueyang Pan" %}
+        <strong>{{ author }}</strong>
+      {% else %}
+        {{ author }}
+      {% endif %}
+      {% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </div>
+  <div class="publication-meta">
+    <div class="publication-venue">{{ pub.venue }}, {{ pub.year }}</div>
+    <div class="publication-links">
+      {% if pub.links %}
+        {%- if pub.links.pdf -%}
+          <a href="{{ pub.links.pdf }}" class="publication-link" title="PDF" aria-label="PDF">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 2.5L19.5 10H14V4.5ZM8 13h2.5a1.5 1.5 0 0 1 0 3H9.5V18H8v-5Zm1.5 1.5H10a.5.5 0 0 0 0-1h-.5v1ZM12 13h3v1.5h-1.5V18H12v-5Zm4 0h3v1.5h-1.5v.5H19V16h-1.5v2H16v-5Z"/>
+            </svg>
+            <span class="link-label">PDF</span>
+          </a>
+        {%- endif -%}
+        {%- if pub.links.code -%}
+          <a href="{{ pub.links.code }}" class="publication-link" title="Code (GitHub)" aria-label="Code (GitHub)">
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <span class="link-label">Code</span>
+          </a>
+        {%- endif -%}
+        {%- for link in pub.links -%}
+          {%- assign key = link[0] -%}
+          {%- if key != 'pdf' and key != 'code' -%}
+            <a href="{{ link[1] }}" class="publication-link">{{ key | upcase }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      {% endif %}
+    </div>
+    {% if pub.bibtex %}
+      <details class="publication-bib">
+        <summary class="publication-bib-toggle">[bib]</summary>
+        <div class="publication-bibtex-wrap">
+          <pre class="publication-bibtex">{{ pub.bibtex | strip }}</pre>
+        </div>
+      </details>
+    {% endif %}
+  </div>
+  {% if pub.award %}
+    <div class="award">
+      <div class="award-text">🏆 {{ pub.award }}</div>
+    </div>
+  {% endif %}
+</div>
+{% endfor %}

@@ -1,0 +1,44 @@
+<div class="section">
+  {% for item in site.data.experience %}
+    <div class="experience-item">
+      <div class="experience-header">
+        <div class="experience-left">
+          {% if item.company_url %}
+            <a class="company" href="{{ item.company_url }}" target="_blank" rel="noopener noreferrer">{{ item.company }}</a>
+          {% else %}
+            <span class="company">{{ item.company }}</span>
+          {% endif %}
+          {% if item.company_icon %}
+            <img class="company-icon" src="{{ item.company_icon | relative_url }}" alt="{{ item.company }} icon" />
+          {% endif %}
+          {% if item.location %}
+            <span class="location">, {{ item.location }}</span>
+          {% endif %}
+        </div>
+        <div class="experience-period">{{ item.period }}</div>
+      </div>
+      <div class="experience-role">
+        {{ item.position }}{% if item.team %}, {{ item.team }}{% endif %}
+      </div>
+      {% if item.mentors %}
+        <div class="experience-mentors">
+          Mentors:
+          {% assign msize = item.mentors | size %}
+          {% if msize == 2 %}
+            {% for m in item.mentors %}
+              {% if m.url %}<a href="{{ m.url }}" target="_blank" rel="noopener noreferrer">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% unless forloop.last %} and {% endunless %}
+            {% endfor %}
+          {% else %}
+            {% assign penultimate = msize | minus: 2 %}
+            {% for m in item.mentors %}
+              {% if m.url %}<a href="{{ m.url }}" target="_blank" rel="noopener noreferrer">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{%- unless forloop.last -%}{% if forloop.index0 == penultimate -%}, and {% else -%}, {% endif -%}{%- endunless -%}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if item.description %}
+        <div class="details">{{ item.description }}</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

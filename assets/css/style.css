@@ -1,0 +1,527 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column
+}
+
+/* Layout */
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 2rem;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-text {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.profile-position,
+.profile-department,
+.profile-institution {
+  margin: 0.1rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.profile-image {
+  margin-left: 2rem;
+}
+
+.profile-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.contact-item i {
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+  color: #333;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #0068d7;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.social-link:hover {
+  color: #337ab7;
+}
+
+.social-link i {
+  margin-right: 5px;
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.education-content {
+  flex-grow: 1;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem; /* uniform gap to next line */
+}
+
+.institution {
+  font-weight: bold;
+}
+
+.period {
+  color: #555;
+}
+
+.degree {
+  margin: 0.5rem 0; /* same gap as details */
+}
+
+.education-logo {
+  margin-left: 2rem;
+}
+
+.education-logo img {
+  width: 75px;
+  height: auto;
+}
+
+.experience-item, .teaching-item, .award-item {
+  margin-bottom: 2rem;
+}
+
+.teaching-item, .award-item {
+  margin-bottom: 1rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.experience-left {
+  display: inline;
+}
+
+.company {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.company-icon {
+  height: 1.2em;
+  width: auto;
+  margin-left: 0.1rem;
+  vertical-align: text-bottom;
+}
+
+.location {
+  color: #555;
+}
+
+.experience-period {
+  color: #555;
+}
+
+.experience-role {
+  margin: 0.5rem 0; /* same gap as details */
+}
+
+.experience-mentors {
+  margin: 0.5rem 0; /* same gap as details */
+}
+
+.details {
+  margin: 0.5rem 0; /* same gap as details */
+  color: #555;
+}
+
+/* Teaching list styling */
+.teaching-list {
+  margin-left: 1.5rem;
+}
+
+.teaching-list .teaching-item {
+  list-style: disc;
+}
+
+/* Awards list styling */
+.awards-list {
+  margin-left: 1.5rem;
+}
+
+.awards-list .award-item {
+  list-style: disc;
+}
+
+/* Unify Education text sizes */
+.education-item .institution,
+.education-item .period,
+.education-item .degree,
+.education-item .details {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Align education logo with top of institution line */
+.education-item .institution { 
+  margin-top: 0; 
+}
+.education-header h3.institution {
+  margin: 0; /* remove default h3 margins to control spacing via container */
+}
+.education-item .details {
+  margin: 0.5rem 0 0; /* uniform gap between degree and details and between details */
+}
+.education-item .institution-country {
+  font-weight: 400; /* not bold */
+}
+.education-logo { 
+  align-self: flex-start; 
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Content sections */
+.section {
+  margin-bottom: 3rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495e;
+  margin-bottom: 2rem;
+}
+
+/* Publications */
+.publication {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.publication-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Artifact badges after title */
+.artifact-icons {
+  margin-left: 0.1rem;
+  display: inline-flex;
+  align-items: flex-start; /* top-align icons with title text */
+}
+
+.artifact-icon {
+  margin-left: 0.2rem;
+  vertical-align: text-bottom;
+  font-size: 1rem;
+}
+
+/* Image icons for artifacts */
+.artifact-icon-img {
+  height: 20px;
+  width: auto;
+  margin-left: 0.2rem;
+  vertical-align: text-bottom; /* top-align with surrounding text */
+  border-radius: 2px;
+}
+
+.publication-authors {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.publication-venue {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.publication-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center; /* keep links and [bib] aligned */
+}
+
+/* Publication meta row: venue + links + BIB on one line */
+.publication-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap; /* wraps nicely on small screens */
+}
+
+.publication-meta .publication-venue {
+  margin-bottom: 0; /* keep venue inline with links */
+}
+
+.publication-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0; /* remove blue pill padding */
+  background: transparent; /* remove blue background */
+  color: #0068d7; /* standard link color */
+  text-decoration: none;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.publication-link:hover {
+  background: transparent;
+  color: #003d80;
+  text-decoration: underline;
+}
+
+.publication-link .icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  margin-right: 0.35rem;
+}
+
+.publication-link .link-label {
+  line-height: 1;
+}
+
+/* Publication BibTeX toggle */
+.publication-bib {
+  margin-top: -0.125em; /* align with other inline links */
+}
+
+.publication-bib > summary {
+  list-style: none;
+}
+
+.publication-bib > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.publication-bib {
+  display: contents; /* let summary stay in row; pre flows to next line */
+}
+
+.publication-bib-toggle {
+  display: inline;
+  padding: 0;
+  background: transparent;
+  color: #0068d7;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.publication-bib-toggle:hover {
+  text-decoration: underline;
+  color: #003d80;
+}
+
+.publication-bibtex-wrap {
+  flex-basis: 100%; /* force the box to start on a new line */
+  display: flex;    /* allow relative-width child to size and align */
+}
+
+.publication-bibtex {
+  margin-top: 0.5rem;
+  background-color: #f1f3f5;
+  padding: 0.75rem;
+  border-radius: 4px;
+  overflow-x: visible; /* allow wrapping instead of horizontal scroll */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+  width: 100%;             /* fill publication content width */
+  max-width: 100%;         /* never exceed container */
+  box-sizing: border-box;  /* include padding in width */
+  align-self: flex-start;  /* avoid stretching */
+  white-space: pre-wrap;   /* preserve formatting but wrap long lines */
+  word-break: break-word;  /* break long tokens if needed */
+  overflow-wrap: anywhere; /* ensure very long tokens wrap */
+}
+
+/* Awards and honors */
+.award {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+}
+
+.award-text {
+  font-weight: 500;
+  color: #856404;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  color: #0068d7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #003d80;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1rem;
+  }
+  
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .publication {
+    padding: 1rem;
+  }
+  
+  .publication-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 1.8rem;
+  }
+  
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}

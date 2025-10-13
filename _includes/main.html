@@ -1,0 +1,77 @@
+<main class="page-content">
+  <div class="wrapper">
+    <div class="profile-header">
+      <div class="profile-content">
+        <div class="profile-text">
+          <h1 class="profile-name">{{ site.name | default: site.title }}</h1>
+          {% if site.position %}
+            <p class="profile-position">{{ site.position }}</p>
+          {% endif %}
+          {% if site.department %}
+            <p class="profile-department">
+                <a href="{{ site.department_url }}">
+                {{ site.department }}</a>
+            </p>
+          {% endif %}
+          {% if site.institution %}
+            <p class="profile-institution">
+                <a href="{{ site.institution_url }}">{{ site.institution }}</a>
+            </p>
+          {% endif %}
+          
+          <div class="contact-info">
+            {% if site.office %}
+              <div class="contact-item">
+                <i class="far fa-building"></i>
+                <span>{{ site.office }}</span>
+              </div>
+            {% endif %}
+            {% if site.email %}
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:{{ site.email }}">Email: {{ site.email }}</a>
+              </div>
+            {% endif %}
+            {% if site.cv %}
+              <div class="contact-item">
+                <i class="fas fa-file-pdf"></i>
+                <a href="{{ site.cv | relative_url }}">Curriculum Vitae</a>
+              </div>
+            {% endif %}
+          </div>
+          
+          <div class="social-links">
+            {% if site.github_username %}
+              <a href="https://github.com/{{ site.github_username }}" class="social-link" title="GitHub" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            {% endif %}
+            {% if site.google_scholar %}
+              <a href="{{ site.google_scholar }}" class="social-link" title="Google Scholar" target="_blank">
+                <i class="fas fa-graduation-cap"></i> Google Scholar
+              </a>
+            {% endif %}
+          {% if site.linkedin %}
+            <a href="{{ site.linkedin }}" class="social-link" title="LinkedIn" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          {% endif %}
+          {% if site.blog %}
+            <a href="{{ site.blog }}" class="social-link" title="Blog" target="_blank">
+              <i class="fas fa-rss"></i> Blog
+            </a>
+          {% endif %}
+          </div>
+        </div>
+        
+        {% if site.profile_image %}
+          <div class="profile-image">
+            <img src="{{ site.profile_image | relative_url }}" alt="{{ site.name | default: site.title }}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    {{ content }}
+  </div>
+</main>

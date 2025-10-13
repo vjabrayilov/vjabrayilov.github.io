@@ -1,0 +1,19 @@
+- degree: Ph.D. in Computer Science
+  institution: Columbia University
+  period: Sep. 2023 - Present (Expected 2027)
+  advisor: Kostis Kaffes
+  advisor_url: "https://www.cs.columbia.edu/~kkaffes/"
+  country: United States
+  logo: /assets/images/columbia_logo.png
+
+- degree: M.Sc. in Computer Science
+  institution: Columbia University
+  period: Sep. 2023 - 2025
+  country: United States
+  logo: /assets/images/columbia_logo.png
+
+- degree: B.Sc. in Computer Engineering
+  institution: Middle East Technical University
+  period: 2019 - 2023
+  country: Turkey
+  logo: /assets/images/metu_logo.png

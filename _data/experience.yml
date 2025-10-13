@@ -1,0 +1,24 @@
+- position: Research Intern
+  team: Systems Research Group
+  company: Microsoft Research
+  company_url: "https://www.microsoft.com/en-us/research/"
+  company_icon: /assets/images/microsoft_logo.png
+  location: Redmond, WA, USA
+  period: Summer 2024
+  description: "Worked on large-scale infrastructure for data and networking, focusing on high-performance systems"
+
+- position: Research Intern
+  company: Penn State University
+  company_url: "https://psu.edu"
+  company_icon: /assets/images/psu_logo.png
+  location: State College, PA, USA
+  period: 2022
+  description: "Built Replicant, a MultiPaxos-based key-value store for strongly consistent cloud replication"
+
+- position: Research Intern
+  company: EPFL
+  company_url: "https://epfl.ch"
+  company_icon: /assets/images/epfl_logo.png
+  location: Lausanne, Switzerland
+  period: 2021
+  description: "Worked on distributed systems reliability and failure analysis"

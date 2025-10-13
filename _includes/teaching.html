@@ -1,0 +1,19 @@
+<div class="section">
+  <ul class="teaching-list">
+    {% for item in site.data.teaching %}
+      <li class="teaching-item">
+        {% assign course_str = item.course %}
+        {% if course_str contains '(' and course_str contains ')' %}
+          {% assign parts = course_str | split: '(' %}
+          {% assign tail = parts | last %}
+          {% assign inside = tail | split: ')' | first | strip %}
+          {% assign before = parts | first | strip %}
+          <div><strong>{{ inside }}: {{ before }}</strong></div>
+        {% else %}
+          <div><strong>{{ item.course }}</strong></div>
+        {% endif %}
+        <div class="details">{{ item.period }}, {{ item.role }}, {{ item.institution }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

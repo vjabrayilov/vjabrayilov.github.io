@@ -1,0 +1,30 @@
+<div class="section">
+  {% for item in site.data.education %}
+    <div class="education-item">
+      <div class="education-content">
+        <div class="education-header">
+          <h3 class="institution">{{ item.institution }}{% if item.country %}<span class="institution-country">, {{ item.country }}</span>{% endif %}</h3>
+          <span class="period">{{ item.period }}</span>
+        </div>
+        <p class="degree">
+          {{ item.degree }}{% if item.minor %}<span class="minor-inline">; Minor in {{ item.minor }}</span>{% endif %}
+        </p>
+        {% if item.advisor %}
+          {% if item.advisor_url %}
+            <p class="details">Advised by <a href="{{ item.advisor_url }}" target="_blank" rel="noopener noreferrer">Prof. {{ item.advisor }}</a></p>
+          {% else %}
+            <p class="details">Advised by Prof. {{ item.advisor }}</p>
+          {% endif %}
+        {% endif %}
+        {% if item.gpa %}
+          <p class="details">{{ item.gpa }}</p>
+        {% endif %}
+      </div>
+      {% if item.logo %}
+        <div class="education-logo">
+          <img src="{{ item.logo | relative_url }}" alt="{{ item.institution }} logo">
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
