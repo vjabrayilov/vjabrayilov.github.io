@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Homepage - Yueyang Pan
+title: Homepage - Vahab Jabrayilov
 ---
 
 {% if site.data.bio.description %}

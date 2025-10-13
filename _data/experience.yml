@@ -1,24 +1,34 @@
-- position: Research Intern
-  team: Systems Research Group
+- position: Research Software Engineer Intern
+  team: Networking Research Group
   company: Microsoft Research
   company_url: "https://www.microsoft.com/en-us/research/"
   company_icon: /assets/images/microsoft_logo.png
   location: Redmond, WA, USA
-  period: Summer 2024
-  description: "Worked on large-scale infrastructure for data and networking, focusing on high-performance systems"
-
-- position: Research Intern
-  company: Penn State University
-  company_url: "https://psu.edu"
-  company_icon: /assets/images/psu_logo.png
-  location: State College, PA, USA
-  period: 2022
-  description: "Built Replicant, a MultiPaxos-based key-value store for strongly consistent cloud replication"
+  # mentors: ["Prof. Kostis Kaffes", "Dr. Anshul Gandhi"]
+  mentors: 
+    - name: "Sathiya Kumaran Mani"
+      url: "https://www.linkedin.com/in/sathiya-kumaran/"
+    - name: "Srikanth Kandula"
+      url: "https://www.linkedin.com/in/srikanthkandula/"
+  period: Jun 2024 - Sep 2024
+  description: "Worked on high-performance network infrastructure for Azure Zero Trust."
 
 - position: Research Intern
   company: EPFL
   company_url: "https://epfl.ch"
   company_icon: /assets/images/epfl_logo.png
   location: Lausanne, Switzerland
-  period: 2021
-  description: "Worked on distributed systems reliability and failure analysis"
+  period: Jun 2023 - Aug 2023
+  mentors:
+    - name: "Prof. Sanidhya Kashyap"
+      url: "https://sanidhya.github.io/"
+  description: "Worked on distributed systems reliability and failure analysis particularly focusing on metastable failures"
+
+- position: Research Intern
+  company: Penn State University
+  company_url: "https://psu.edu"
+  company_icon: /assets/images/psu_logo.png
+  location: State College, PA, USA
+  # period: 2022
+  description: "Built Replicant, a MultiPaxos-based key-value store for strongly consistent cloud replication"
+

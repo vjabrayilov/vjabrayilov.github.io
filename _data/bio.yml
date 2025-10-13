@@ -1,9 +1,10 @@
 description: |
-  I am a Ph.D. candidate in Computer Science at [Columbia University](https://columbia.edu) advised by [Kostis Kaffes](https://www.cs.columbia.edu/~kkaffes/), focusing on systems performance and low-latency computing.
+  I am a Ph.D. candidate in [Computer Science Department](https://www.cs.columbia.edu/) at [Columbia University](https://columbia.edu), advised by [Prof. Kostis Kaffes](https://www.cs.columbia.edu/~kkaffes/).
+  focusing on systems performance and low-latency computing.
 
-  My work spans **networking, operating systems, and machine learning runtimes**, with an emphasis on **CPU and GPU virtualization**.
+  My work spans **networking, operating systems, and machine learning systems**.
   I have built high-performance software such as [Machnet](https://github.com/microsoft/machnet), a kernel-bypass networking framework, and interned at [Microsoft Research](https://www.microsoft.com/en-us/research/about-microsoft-research/), where I worked on large-scale infrastructure for data and networking.
 
-  I have expertise in **C/C++, Rust, CUDA, DPDK, eBPF and Linux kernel programming**, and my interests lie at high-frequency trading systems and large-scale AI platforms, where reliability and nano/microsecond-scale performance are critical.
+  I have expertise in **C/C++, Rust, CUDA, DPDK, RDMA, eBPF and Linux kernel programming**, and my interests lie at high-frequency trading systems and large-scale AI platforms, where reliability and nano/microsecond-scale performance are critical.
 
   Before starting my Ph.D., I built [Replicant](https://github.com/psu-csl/replicated-store), a MultiPaxos-based key-value store for strongly consistent cloud replication during a research internship at [Penn State](https://psu.edu), and also gained experience at [EPFL](https://epfl.ch), where I worked on distributed systems reliability and failure analysis.
