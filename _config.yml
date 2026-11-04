@@ -10,7 +10,7 @@ institution: Columbia University
 institution_url: "https://www.columbia.edu/"
 email: vjabrayilov@cs.columbia.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the personal website of Vahab Jabrayilov, PhD Candidate in Computer Science at Columbia University
+  Ph.D. candidate in Computer Science at Columbia University. Systems engineer focused on ML performance: accelerators (TPU, GPU), low-latency networking, and scheduling.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vjabrayilov.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 office: "New York, NY, USA"
@@ -28,11 +28,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-# Collections for publications
-collections:
-  publications:
-    output: false
 
 # Exclude from processing
 exclude:

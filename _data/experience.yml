@@ -1,17 +1,49 @@
+# Wording follows the locked resume. `bullets` lists several items; `description` is a single line.
+
+- position: Student Researcher
+  team: TPU Runtime team
+  company: Google
+  company_url: "https://www.google.com"
+  company_icon: /assets/images/google_logo.svg
+  location: New York, NY and Sunnyvale, CA, USA
+  period: May 2026 - Present
+  current: true
+  mentors:
+    - name: "Ofir Weisse"
+      url: "https://www.linkedin.com/in/ofir-weisse-662ba379/"
+    - name: "Buddh Prakash"
+      url: "https://www.linkedin.com/in/dubstack/"
+  description: "Optimize TPU fleet utilization with runtime and compiler performance work."
+
+- position: Graduate Research Assistant
+  company: Columbia University
+  company_url: "https://www.cs.columbia.edu/"
+  company_icon: /assets/images/columbia_logo.png
+  location: New York, NY, USA
+  period: Aug 2023 - Present
+  current: true
+  mentor_label: "Advisor"
+  mentors:
+    - name: "Prof. Kostis Kaffes"
+      url: "https://www.cs.columbia.edu/~kkaffes/"
+  bullets:
+    - "Built Fence, a runtime that adds fault isolation to dynamic spatial sharing on unmodified NVIDIA GPUs for LLM serving."
+    - "Built [Machnet](https://github.com/microsoft/machnet), a C++ DPDK messaging library for public cloud VMs that handles 750K RPS on Azure at 61us tail latency."
+    - "Built Rorke, a microsecond-scale VM scheduler in Rust and eBPF."
+
 - position: Research Software Engineer Intern
   team: Networking Research Group
   company: Microsoft Research
   company_url: "https://www.microsoft.com/en-us/research/"
   company_icon: /assets/images/microsoft_logo.png
   location: Redmond, WA, USA
-  # mentors: ["Prof. Kostis Kaffes", "Dr. Anshul Gandhi"]
-  mentors: 
+  mentors:
     - name: "Sathiya Kumaran Mani"
       url: "https://www.linkedin.com/in/sathiya-kumaran/"
     - name: "Srikanth Kandula"
       url: "https://www.linkedin.com/in/srikanthkandula/"
   period: Jun 2024 - Sep 2024
-  description: "Worked on high-performance network infrastructure for Azure Zero Trust."
+  description: "Built a Rust DPDK packet processor that handles millions of flow logs/sec with deterministic sub-ms latency for Azure's real-time data ingestion pipeline."
 
 - position: Research Intern
   company: EPFL
@@ -19,16 +51,19 @@
   company_icon: /assets/images/epfl_logo.png
   location: Lausanne, Switzerland
   period: Jun 2023 - Aug 2023
+  mentor_label: "Advisor"
   mentors:
     - name: "Prof. Sanidhya Kashyap"
       url: "https://sanidhya.github.io/"
-  description: "Worked on distributed systems reliability and failure analysis particularly focusing on metastable failures"
+  description: "Analyzed metastable failures in distributed systems and designed mitigations."
 
 - position: Research Intern
   company: Penn State University
   company_url: "https://psu.edu"
   company_icon: /assets/images/psu_logo.png
   location: State College, PA, USA
-  # period: 2022
-  description: "Built Replicant, a MultiPaxos-based key-value store for strongly consistent cloud replication"
-
+  mentor_label: "Advisor"
+  mentors:
+    - name: "Abutalib Aghayev"
+      url: "https://www.linkedin.com/in/abutalib-aghayev-b5a61b281/"
+  description: "Built Replicant, a MultiPaxos-based key-value store for strongly consistent cloud replication."

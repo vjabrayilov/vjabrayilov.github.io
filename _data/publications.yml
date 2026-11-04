@@ -1,9 +1,80 @@
+# Order here is the display order. `selected: true` shows a paper in the top list.
+# All papers appear in the "All publications" dropdown.
+# `pdf` is a file in assets/pdf/papers/. Until that file exists, the PDF button shows as unavailable.
+# Under-review papers: no year, PDF, abstract, or BibTeX.
+
+- title: "Enabling Fast Networking in the Public Cloud"
+  selected: true
+  anchor: "pub-machnet"
+  summary: "Presents Machnet, a C++ DPDK messaging library for public cloud VMs."
+  authors: ["Alireza Sanaee", "Vahab Jabrayilov", "Ilias Marinos", "Farbod Shahinfar", "Divyanshu Saxena", "Gianni Antichi", "Kostis Kaffes"]
+  equal: ["Alireza Sanaee", "Vahab Jabrayilov"]
+  venue: "ASPLOS"
+  year: 2026
+  pdf: "assets/pdf/papers/enabling-fast-networking-asplos26.pdf"
+  source_url: "https://doi.org/10.1145/3779212.3790158"
+  source_label: "ACM"
+  talks:
+    - label: "P99 CONF Talk"
+      url: "https://p99conf.io/session/how-we-hit-bare-metal-tail-latency-inside-cloud-vms-machnet/"
+    - label: "NYC Systems Talk"
+      url: "https://www.youtube.com/watch?v=ksRUv_axLU4"
+  abstract: "Despite a decade of research, most high-performance userspace network stacks remain impractical for public cloud tenants developing their applications atop Virtual Machines (VMs). We identify two root causes: (1) reliance on specialized NIC features (e.g., flow steering, deep buffers) absent in commodity cloud vNICs, and (2) rigid execution models ill-suited to diverse application needs. We present Machnet, a high-performance and flexible userspace network stack designed for public cloud VMs. Machnet uses only a minimal set of vNIC features that any major cloud provider supports. It also relies on a microkernel architecture to enable flexible application execution. We evaluate Machnet across three major public clouds and on production-grade applications, including a key-value store, an HTTP server, and a state-machine replication system. We release Machnet at https://github.com/microsoft/machnet."
+  bibtex: |
+    @inproceedings{10.1145/3779212.3790158,
+      author = {Sanaee, Alireza and Jabrayilov, Vahab and Marinos, Ilias and Shahinfar, Farbod and Saxena, Divyanshu and Antichi, Gianni and Kaffes, Kostis},
+      title = {Enabling Fast Networking in the Public Cloud},
+      booktitle = {Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2},
+      pages = {679--696},
+      year = {2026},
+      doi = {10.1145/3779212.3790158}
+    }
+
+- title: "Fence: Safe Dynamic Spatial Sharing for GPUs"
+  selected: true
+  anchor: "pub-fence"
+  summary: "Adds fault isolation to dynamic spatial sharing on unmodified NVIDIA GPUs for LLM serving."
+  authors: ["Vahab Jabrayilov", "Pulak Mehrotra", "Chenxi Huang", "Jason Nieh", "Junfeng Yang", "Kostis Kaffes"]
+  venue: "Under Review"
+
+- title: "Rorke: Black-box Virtual Machine Scheduling for the Public Cloud"
+  selected: true
+  anchor: "pub-rorke"
+  summary: "A microsecond-scale VM scheduler in Rust and eBPF."
+  authors: ["Vahab Jabrayilov", "Teng Jian", "Jason Nieh", "Kostis Kaffes"]
+  venue: "Under Review"
+  talks:
+    - label: "NYC Systems Talk"
+      url: "https://www.youtube.com/watch?v=ksRUv_axLU4"
+
+- title: "An Expert in Residence: LLM Agents for Always-On Operating System Tuning"
+  selected: true
+  summary: "Uses LLM agents to tune operating systems continuously."
+  authors: ["Georgios Liargkovas", "Vahab Jabrayilov", "Hubertus Franke", "Kostis Kaffes"]
+  venue: "NeurIPS MLForSys Workshop"
+  year: 2025
+  pdf: "assets/pdf/papers/expert-in-residence-mlforsys25.pdf"
+  source_url: "https://neurips.cc/virtual/2025/129122"
+  source_label: "NeurIPS"
+  abstract: "Classical machine-learning auto-tuners for OS control struggle with semantic gaps, brittle rewards, and unsafe exploration. We introduce an online, LLM-driven agent that emulates expert reasoning for continuous OS optimization. When tuning the Linux Completely Fair Scheduler’s hyperparameters, the agent outperforms Bayesian optimization by 5% in single-parameter tuning, 7.1% in two-parameter co-tuning, and a human expert by 2.98% overall, while converging faster and adapting more quickly to workload changes. When application counters are unavailable, system-level proxies (e.g., Instructions Per Cycle (IPC)) preserved tail latency in our setup. Putting this together, we propose adopting the Model Context Protocol (MCP) for tool/resource discovery and invocation and a logging channel; on top of that, we propose adding transactional apply–commit–revert, host-mediated approval gates, and policy controls in the OS-tuning server and host to ensure safe, auditable operation. Our results and reference design suggest a practical path toward safe, self-adapting OS control."
+  bibtex: |
+    @inproceedings{liargkovas2025expert,
+      author = {Liargkovas, Georgios and Jabrayilov, Vahab and Franke, Hubertus and Kaffes, Kostis},
+      title = {An Expert in Residence: LLM Agents for Always-On Operating System Tuning},
+      booktitle = {NeurIPS 2025 Workshop on Machine Learning for Systems},
+      year = {2025}
+    }
+
 - title: "HoliPaxos: Towards More Predictable Performance in State Machine Replication"
+  selected: true
+  summary: "Makes state machine replication performance more predictable."
   authors: ["Zhiying Liang", "Vahab Jabrayilov", "Abutalib Aghayev", "Aleksey Charapko"]
   venue: "VLDB"
   year: 2025
-  links:
-    pdf: "https://www.vldb.org/pvldb/vol18/p2505-charapko.pdf"
+  pdf: "assets/pdf/papers/holipaxos-vldb25.pdf"
+  source_url: "https://doi.org/10.14778/3742728.3742744"
+  source_label: "VLDB"
+  abstract: "State machine replication (SMR) algorithms ensure redundancy in critical systems and, as a result, underpin fault-tolerant distributed databases. Good SMR protocol performance is essential for capacity planning and meeting desired performance objectives. However, many implementations of popular SMR algorithms, such as MultiPaxos and Raft, have issues that make their performance unpredictable. This unpredictability often arises from certain “bolt-on” additions to core protocols, such as external failure detectors and replication log compaction. In this paper, we argue that tighter integration of such traditionally ad-hoc mechanisms with the core replication protocols can stabilize performance, making the solutions more reliable and more accessible to accurate capacity planning. Moreover, we show that these integrations can be nondisruptive for the underlying consensus algorithm, resulting in systems that preserve the simplicity and safety of traditional single-leader consensus-based SMR. To that order, we integrate the failure and slowdown detectors inside the SMR and achieve better performance and faster fail-over under various network partitions and node slowdown events. We also illustrate that tight integration of replication log management, pruning, and snapshotting can reduce memory and CPU usage while avoiding performance fluctuations associated with traditional log compaction and cleanup approaches."
   bibtex: |
     @article{DBLP:journals/pvldb/LiangJAC25,
       author = {Liang, Zhiying and Jabrayilov, Vahab and Aghayev, Abutalib and Charapko, Aleksey},
@@ -15,29 +86,31 @@
       year = {2025}
     }
 
-
-- title: "Fast Userspace Networking for the Rest of Us"
-  authors: ["Alireza Sanaee", "Vahab Jabrayilov", "Ilias Marinos", "Anuj Kalia", "Divyanshu Saxena", "Prateesh Goyal", "Kostis Kaffes", "Gianni Antichi"]
-  venue: "arXiv"
+- title: "Practical Considerations for Implementing State Machine Replication in the Cloud"
+  authors: ["Zhiying Liang", "Vahab Jabrayilov", "Abutalib Aghayev", "Aleksey Charapko"]
+  venue: "ICDCS"
   year: 2025
-  links:
-    pdf: "https://arxiv.org/abs/2502.09281"
+  pdf: "assets/pdf/papers/practical-considerations-smr-icdcs25.pdf"
+  source_url: "https://par.nsf.gov/servlets/purl/10663014"
+  source_label: "NSF PAR"
+  abstract: "State Machine Replication (SMR) protocols form the backbone of many distributed systems. Enterprises and startups increasingly build their distributed systems on the cloud due to its many advantages, such as scalability and cost-effectiveness. Due to their prevalence in systems, the practical aspects of SMR algorithms, such as efficiency and performance, become hugely important. These practical considerations can impact capacity planning, deployment strategies, and, ultimately, the cost of running stateful systems in the cloud. In this paper, we consider various practical choices that impact the performance and efficiency of state machine replication in the cloud. To that order, we design a language-agnostic Multi-Paxos-based state machine architecture and implement it in several languages popular for cloud deployment. In the process, we investigate the impact of threading, communication, and memory management models on replicated state machines’ performance and resource efficiency. We also examine the high-level implications of virtualization on the performance of SMR implementations in various languages. We present our findings as a collection of practical lessons backed by our experimental data and analysis."
   bibtex: |
-    @article{sanaee2025fastuserspacenetworkingrest,
-      title = {Fast Userspace Networking for the Rest of Us},
-      author = {Sanaee, Alireza and Jabrayilov, Vahab and Marinos, Ilias and Kalia, Anuj and Saxena, Divyanshu and Goyal, Prateesh and Kaffes, Kostis and Antichi, Gianni},
-      year = {2025},
-      eprint = {2502.09281},
-      archivePrefix = {arXiv},
-      primaryClass = {cs.NI}
+    @inproceedings{liang2025practical,
+      author = {Liang, Zhiying and Jabrayilov, Vahab and Aghayev, Abutalib and Charapko, Aleksey},
+      title = {Practical Considerations for Implementing State Machine Replication in the Cloud},
+      booktitle = {IEEE 45th International Conference on Distributed Computing Systems (ICDCS)},
+      pages = {791--801},
+      year = {2025}
     }
 
 - title: "Rethinking the Networking Stack for Serverless Environments: A Sidecar Approach"
   authors: ["Vishwanath Seshagiri", "Abhinav Gupta", "Vahab Jabrayilov", "Avani Wildani", "Kostis Kaffes"]
-  venue: "SoCC"
+  venue: "ACM SoCC"
   year: 2024
-  links:
-    pdf: "https://doi.org/10.1145/3698038.3698561"
+  pdf: "assets/pdf/papers/rethinking-networking-serverless-socc24.pdf"
+  source_url: "https://doi.org/10.1145/3698038.3698561"
+  source_label: "ACM"
+  abstract: "Serverless platforms rely on legacy networking stacks for communication and data movement. We quantitatively analyze the performance of these stacks and show their mismatch with highly consolidated, virtualized modern serverless environments, focusing on Firecracker, the most common serverless virtualization framework. As serverless applications grow in complexity and interaction, the resulting network bottleneck is a prime source of user-perceived, end-to-end latency. In this paper, we present a detailed vision of a new, sidecar-based networking stack for serverless environments. Our primary design goal is to provide low-overhead networking while maintaining existing security guarantees. We outline the research challenges in both the control and the data plane that the community needs to tackle before such a sidecar architecture can be used in practice."
   bibtex: |
     @article{10.1145/3698038.3698561,
       author = {Seshagiri, Vishwanath and Gupta, Abhinav and Jabrayilov, Vahab and Wildani, Avani and Kaffes, Kostis},
@@ -54,8 +127,10 @@
   authors: ["Zhiying Liang", "Vahab Jabrayilov", "Aleksey Charapko", "Abutalib Aghayev"]
   venue: "arXiv"
   year: 2024
-  links:
-    pdf: "https://arxiv.org/abs/2405.11183"
+  pdf: "assets/pdf/papers/multipaxos-made-complete.pdf"
+  source_url: "https://arxiv.org/abs/2405.11183"
+  source_label: "arXiv"
+  abstract: "MultiPaxos, while a fundamental Replicated State Machine algorithm, suffers from a dearth of comprehensive guidelines for achieving a complete and correct implementation. This deficiency has hindered MultiPaxos' practical utility and adoption and has resulted in flawed claims about its capabilities. Our paper aims to bridge the gap between MultiPaxos' complexity and practical implementation through a meticulous and detailed design process spanning more than a year. It carefully dissects each phase of MultiPaxos and offers detailed step-by-step pseudocode -- in addition to a complete open-source implementation -- for all components, including the leader election, the failure detector, and the commit phase. The implementation of our complete design also provides better performance stability, resource usage, and network partition tolerance than naive MultiPaxos versions. Our specification includes a lightweight log compaction approach that avoids taking repeated snapshots, significantly improving resource usage and performance stability. Our failure detector, integrated into the commit phase of the algorithm, uses variable and adaptive heartbeat intervals to settle on a better leader under partial connectivity and network partitions, improving liveness under such conditions."
   bibtex: |
     @article{liang2024multipaxoscomplete,
       title = {MultiPaxos Made Complete},
@@ -70,8 +145,10 @@
   authors: ["Zhiying Liang", "Vahab Jabrayilov", "Aleksey Charapko", "Abutalib Aghayev"]
   venue: "arXiv"
   year: 2024
-  links:
-    pdf: "https://arxiv.org/abs/2405.11182"
+  pdf: "assets/pdf/papers/cost-of-gc-smr.pdf"
+  source_url: "https://arxiv.org/abs/2405.11182"
+  source_label: "arXiv"
+  abstract: "State Machine Replication (SMR) protocols form the backbone of many distributed systems. Enterprises and startups increasingly build their distributed systems on the cloud due to its many advantages, such as scalability and cost-effectiveness. One of the first technical questions companies face when building a system on the cloud is which programming language to use. Among many factors that go into this decision is whether to use a language with garbage collection (GC), such as Java or Go, or a language with manual memory management, such as C++ or Rust. Today, companies predominantly prefer languages with GC, like Go, Kotlin, or even Python, due to ease of development; however, there is no free lunch: GC costs resources (memory and CPU) and performance (long tail latencies due to GC pauses). While there have been anecdotal reports of reduced cloud cost and improved tail latencies when switching from a language with GC to a language with manual memory management, so far, there has not been a systematic study of the GC overhead of running an SMR-based cloud system. This paper studies the overhead of running an SMR-based cloud system written in a language with GC. To this end, we design from scratch a canonical SMR system -- a MultiPaxos-based replicated in-memory key-value store -- and we implement it in C++, Java, Rust, and Go. We compare the performance and resource usage of these implementations when running on the cloud under different workloads and resource constraints and report our results. Our findings have implications for the design of cloud systems."
   bibtex: |
     @article{liang2024costgarbagecollectionstate,
       title = {The Cost of Garbage Collection for State Machine Replication},
@@ -86,8 +163,9 @@
   authors: ["Yigit Sever", "Goktug Ekinci", "Adnan Harun Dogan", "Bugra Alparslan", "Abdurrahman Said Gurbuz", "Vahab Jabrayilov", "Pelin Angin"]
   venue: "SRMC"
   year: 2022
-  links:
-    pdf: "https://doi.org/10.1109/SRMC57347.2022.00007"
+  pdf: "assets/pdf/papers/ids-container-security-srmc22.pdf"
+  source_url: "https://doi.org/10.1109/SRMC57347.2022.00007"
+  source_label: "IEEE"
   bibtex: |
     @article{9973138,
       author = {Sever, Yigit and Ekinci, Goktug and Dogan, Adnan Harun and Alparslan, Bugra and Gurbuz, Abdurrahman Said and Jabrayilov, Vahab and Angin, Pelin},

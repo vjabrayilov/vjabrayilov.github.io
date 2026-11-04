@@ -1,0 +1,15 @@
+<div class="section">
+  {% for talk in site.data.talks %}
+    <div class="publication">
+      <div class="venue-tag">{{ talk.venue }}</div>
+      <div class="publication-title">{{ talk.title }}</div>
+      <div class="publication-summary">{{ talk.summary }}</div>
+      {% if talk.url or talk.video %}
+        <div class="publication-actions">
+          {% if talk.video %}<a href="{{ talk.video }}" class="pub-button" target="_blank" rel="noopener noreferrer">Video</a>{% endif %}
+          {% if talk.url %}<a href="{{ talk.url }}" class="pub-button" target="_blank" rel="noopener noreferrer">Talk page</a>{% endif %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

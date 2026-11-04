@@ -1,0 +1,15 @@
+# Paper cards link to these talks through their own `talks` field in publications.yml.
+- title: "How We Hit Bare-Metal Tail Latency Inside Cloud VMs: Machnet"
+  venue: "P99 CONF 2026"
+  summary: "Covers Machnet's design and tradeoffs."
+  url: "https://p99conf.io/session/how-we-hit-bare-metal-tail-latency-inside-cloud-vms-machnet/"
+
+- title: "Enabling Fast Networking in the Public Cloud"
+  venue: "ASPLOS 2026"
+  summary: "Conference presentation of the Machnet paper."
+
+- title: "Achieving Bare Metal Performance in the Cloud"
+  venue: "NYC Systems, Aug 2025"
+  summary: "Covers Machnet and Rorke."
+  url: "https://nycsystems.xyz/2025/august.html"
+  video: "https://www.youtube.com/watch?v=ksRUv_axLU4"

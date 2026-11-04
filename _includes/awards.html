@@ -1,7 +1,8 @@
 <div class="section">
-  <ul class="awards-list">
-    {% for item in site.data.awards %}
-      <li class="award-item"><strong>{{ item.award }}</strong>, {{ item.organization }}, {{ item.year }}</li>
-    {% endfor %}
-  </ul>
+  {% for item in site.data.awards %}
+    <div class="award-item">
+      <span>{{ item.award }}</span>
+      <span class="period">{{ item.year }}</span>
+    </div>
+  {% endfor %}
 </div>

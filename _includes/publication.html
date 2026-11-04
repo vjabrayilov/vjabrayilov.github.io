@@ -1,0 +1,50 @@
+{%- assign pub = include.pub -%}
+<div class="publication"{% if include.use_anchor and pub.anchor %} id="{{ pub.anchor }}"{% endif %}>
+  <div class="venue-tag{% if pub.venue == 'Under Review' %} venue-tag-muted{% endif %}">{{ pub.venue }}{% if pub.year %} {{ pub.year }}{% endif %}</div>
+  <div class="publication-title">{{ pub.title }}</div>
+  {% if pub.summary %}<div class="publication-summary">{{ pub.summary }}</div>{% endif %}
+  <div class="publication-authors">
+    {%- for author in pub.authors -%}
+      {%- assign equal_mark = "" -%}
+      {%- if pub.equal contains author -%}{%- assign equal_mark = "*" -%}{%- endif -%}
+      {%- if author == site.name -%}
+        <strong>{{ author }}{{ equal_mark }}</strong>
+      {%- else -%}
+        {{ author }}{{ equal_mark }}
+      {%- endif -%}
+      {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+    {%- if pub.equal %} (* equal contribution){% endif -%}
+  </div>
+  {% if pub.pdf or pub.source_url or pub.talks or pub.abstract or pub.bibtex %}
+  <div class="publication-actions">
+    {%- if pub.pdf -%}
+      {%- assign pdf_path = "/" | append: pub.pdf -%}
+      {%- assign pdf_file = site.static_files | where: "path", pdf_path | first -%}
+      {%- if pdf_file -%}
+        <a href="{{ pub.pdf | relative_url }}" class="pub-button" target="_blank" rel="noopener noreferrer">PDF</a>
+      {%- else -%}
+        <span class="pub-button pub-button-disabled" title="PDF coming soon">PDF</span>
+      {%- endif -%}
+    {%- endif -%}
+    {%- if pub.source_url -%}
+      <a href="{{ pub.source_url }}" class="pub-button" target="_blank" rel="noopener noreferrer">{{ pub.source_label }}</a>
+    {%- endif -%}
+    {%- for talk in pub.talks -%}
+      <a href="{{ talk.url }}" class="pub-button" target="_blank" rel="noopener noreferrer">{{ talk.label }}</a>
+    {%- endfor -%}
+    {% if pub.abstract %}
+      <details class="publication-bib">
+        <summary class="pub-button">Abstract</summary>
+        <div class="publication-abstract">{{ pub.abstract | escape }}</div>
+      </details>
+    {% endif %}
+    {% if pub.bibtex %}
+      <details class="publication-bib">
+        <summary class="pub-button">BibTeX</summary>
+        <pre class="publication-bibtex">{{ pub.bibtex | strip }}</pre>
+      </details>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
