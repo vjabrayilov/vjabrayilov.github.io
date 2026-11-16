@@ -2,6 +2,6 @@ tagline: "Systems engineer focused on ML performance: accelerators (TPU, GPU), l
 description: |
   I'm a Ph.D. candidate in Computer Science at [Columbia University](https://www.cs.columbia.edu/), advised by [Prof. Kostis Kaffes](https://www.cs.columbia.edu/~kkaffes/). I work on **ML systems**, with a focus on making the infrastructure under AI workloads faster and more reliable. My work so far has covered:
 
-  * **Accelerators:** optimizing TPU fleet utilization through runtime and compiler performance work at **Google**, and adding fault isolation to GPU sharing with [Fence](#pub-fence)
+  * **Accelerators:** optimizing TPU fleet utilization through XLA compiler and TPU runtime performance work at **Google**, and adding fault isolation to GPU sharing with [Fence](#pub-fence)
   * **Networking:** enabling low-latency networking in public cloud VMs with [Machnet](#pub-machnet) at **Microsoft Research**
   * **Scheduling:** enabling microsecond-scale VM scheduling with [Rorke](#pub-rorke)

@@ -1,13 +1,14 @@
 # Wording follows the locked resume. `bullets` lists several items; `description` is a single line.
 
-- position: Student Researcher
+- position: Research Intern
+  team: TPU Performance
   company: Google
   company_url: "https://www.google.com"
   company_icon: /assets/images/google_logo.svg
   location: New York, NY and Sunnyvale, CA, USA
   period: May 2026 - Present
   current: true
-  description: "Optimize TPU fleet utilization with runtime and compiler performance work."
+  description: "Optimize TPU fleet utilization with XLA compiler and TPU runtime performance work."
 
 - position: Graduate Research Assistant
   company: Columbia University
